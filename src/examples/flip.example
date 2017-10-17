@@ -1,23 +1,15 @@
-// Get the first position.
 var first = el.getBoundingClientRect();
 
-// Move it to the end.
 el.classList.add('totes-at-the-end');
 
-// Get the last position.
 var last = el.getBoundingClientRect();
 
-// Invert.
-var invert = first.top - last.top;
+el.style.transform = `translateY(${invert}px)`;
 
-// Go from the inverted position to last.
-var player = el.animate([
-  { transform: 'translateY(' + invert + 'px)' },
-  { transform: 'translateY(0)' }
-], {
-  duration: 300,
-  easing: 'cubic-bezier(0,0,0.32,1)',
+requestAnimationFrame(function() {
+
+  el.style.transition = 'transform ease 500ms';
+  el.style.transform = '';
 });
 
-// Do any tidy up at the end of the animation.
-player.addEventListener('finish', tidyUpAnimations);
+el.addEventListener('transitionend', tidyUpAnimations);

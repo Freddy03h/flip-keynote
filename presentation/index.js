@@ -43,6 +43,7 @@ import {
   ListHandler,
   List4,
   ListTransform2,
+  AnimFLIP,
 } from '../src/components'
 
 export default class Presentation extends React.Component {
@@ -103,7 +104,7 @@ export default class Presentation extends React.Component {
             I want to animate Layout
           </Heading>
           <Text textColor="tertiary" margin="3.5rem auto 0">
-            Please give me back <Code>width</Code> et <Code>height</Code> 😭
+            Give me back my <Code>width</Code> & <Code>height</Code> 😭
           </Text>
         </Slide>
 
@@ -145,7 +146,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
-          (here animation)
+          <AnimFLIP />
         </Slide>
 
         <CodeSlide
@@ -153,7 +154,14 @@ export default class Presentation extends React.Component {
           lang="js"
           code={require("raw-loader!../src/examples/flip.example")}
           ranges={[
-            { loc: [0, 23], title: "F.L.I.P." },
+            { loc: [0, 15], title: "F.L.I.P." },
+            { loc: [0, 1], note: "Get the first position" },
+            { loc: [2, 3], note: "Change the Layout" },
+            { loc: [4, 5], note: "Get the last position" },
+            { loc: [6, 7], note: "Invert" },
+            { loc: [8, 9], note: "Wait for the next frame" },
+            { loc: [10, 12], note: "Play the animation" },
+            { loc: [14, 15], note: "Capture the end with transitionend" },
           ]}
         />
 
@@ -173,6 +181,57 @@ export default class Presentation extends React.Component {
           <img className="content" src={images.userperception} />
           <Heading size={6} caps textColor="tertiary">
             Taking advantage of user perception
+          </Heading>
+        </Slide>
+
+        <Slide>
+          <Heading size={4} caps textColor="secondary" margin="-4rem auto 0.5rem">
+            References
+          </Heading>
+
+          <Text textAlign="left">Articles</Text>
+          <List textColor="tertiary" margin="0px 0px 1em">
+            <ListItem><Link href="https://aerotwist.com/blog/flip-your-animations/" target="_blank">FLIP Your Animations</Link></ListItem>
+            <ListItem><Link href="https://medium.com/developers-writing/animating-the-unanimatable-1346a5aab3cd#.7a0hhecpw" target="_blank">Animating the Unanimatable. Smooth reordering transitions in React.js</Link></ListItem>
+          </List>
+
+          <Text textAlign="left">Talks</Text>
+          <List textColor="tertiary" margin="0px 0px 1em">
+            <ListItem><Link href="https://www.youtube.com/watch?v=RCFQu0hK6bU" target="_blank">The Applied Science of Runtime Performance</Link></ListItem>
+            <ListItem><Link href="https://www.youtube.com/watch?v=thNyy5eYfbc" target="_blank">High performance web user interfaces</Link></ListItem>
+          </List>
+
+          <Text textAlign="left">Tools</Text>
+          <List textColor="tertiary" margin="0px 0px 1em">
+            <ListItem><Link href="https://github.com/joshwcomeau/react-flip-move" target="_blank">react-flip-move</Link></ListItem>
+          </List>
+
+          <Text textAlign="left">Others</Text>
+          <List textColor="tertiary" margin="0px 0px 1em">
+            <ListItem><Link href="http://jankfree.org/" target="_blank">Jank Free</Link></ListItem>
+          </List>
+        </Slide>
+
+        <Slide>
+          (issue about FLIP, vDOM is a cool abstraction)
+        </Slide>
+
+        <Slide>
+          (What's next : css contain and firefox quantum web render)
+        </Slide>
+
+        <Slide>
+          <Heading size={1} caps textColor="tertiary">
+            Merci
+          </Heading>
+          <Heading size={5} caps textColor="secondary" margin="3em 0 0">
+            <Link href="https://twitter.com/HarrisFreddy" textColor="secondary">
+              <img src={images.twitter} style={{border: 'none', boxShadow: 'none', verticalAlign: 'sub', height: 60, margin: 0, marginRight: 15}} />
+              @harrisfreddy
+            </Link>
+          </Heading>
+          <Heading size={6} caps textColor="tertiary" margin="1em 0 0.5em">
+            Freelance React Native & Progressive Web App
           </Heading>
         </Slide>
 
