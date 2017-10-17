@@ -12,9 +12,11 @@
   },
   "author": "Freddy Harris",
   "dependencies": {
+    "lodash.omit": "^4.5.0",
     "normalize.css": "3.0.3",
     "react": "15.4.2",
     "react-dom": "15.4.2",
+    "react-flip-move": "2.5.0",
     "spectacle": "^2.0.0",
     "spectacle-code-slide": "^0.4.0"
   },

@@ -1,0 +1,13 @@
+<FlipMove
+  easing="ease-in"
+  duration={300}
+  enterAnimation={enterAnimationConfig}
+  leaveAnimation={leaveAnimationConfig}
+>
+{
+  this.props.dataList.map((data, index) =>
+    <ListItem {...data} />
+  )
+}
+</FlipMove>
+

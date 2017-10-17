@@ -30,7 +30,7 @@ require("spectacle/lib/themes/default/index.css");
 
 
 // const images = {
-//   city: require("../assets/city.jpg"),
+//   flipfirst: require("../assets/city.jpg"),
 //   kat: require("../assets/kat.png"),
 //   logo: require("../assets/formidable-logo.svg"),
 //   markdown: require("../assets/markdown.png")
@@ -41,6 +41,12 @@ require("spectacle/lib/themes/default/index.css");
 const theme = createTheme({
   primary: "#ff4081"
 });
+
+import {
+  ListHandler,
+  List4,
+  ListTransform2,
+} from '../src/components'
 
 export default class Presentation extends React.Component {
   render() {
@@ -59,6 +65,16 @@ export default class Presentation extends React.Component {
           <Heading size={1} fit caps textColor="black">
             Layout Animation
           </Heading>
+        </Slide>
+
+        <Slide align="middle flex-start">
+          <ListHandler>
+            <List4 />
+          </ListHandler>
+        </Slide>
+
+        <Slide>
+          <ListTransform2 />
         </Slide>
 
       </Deck>

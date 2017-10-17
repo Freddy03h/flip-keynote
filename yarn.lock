@@ -3361,6 +3361,10 @@ lodash.memoize@^4.0.1, lodash.memoize@^4.1.0:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
 
+lodash.omit@^4.3.0, lodash.omit@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.omit/-/lodash.omit-4.5.0.tgz#6eb19ae5a1ee1dd9df0b969e66ce0b7fa30b5e60"
+
 lodash.padstart@^4.2.0:
   version "4.6.1"
   resolved "https://registry.yarnpkg.com/lodash.padstart/-/lodash.padstart-4.6.1.tgz#d2e3eebff0d9d39ad50f5cbd1b52a7bce6bb611b"
@@ -4523,6 +4527,12 @@ react-dom@15.4.2, "react-dom@^15.0.1 || ^0.14.7":
     fbjs "^0.8.1"
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
+
+react-flip-move@2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/react-flip-move/-/react-flip-move-2.5.0.tgz#64e9ab19745bf2404a1605e6e98ec696b82e8dcd"
+  dependencies:
+    lodash.omit "^4.3.0"
 
 react-history@^0.15.1:
   version "0.15.1"
