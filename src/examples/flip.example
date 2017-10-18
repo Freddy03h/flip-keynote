@@ -4,6 +4,8 @@ el.classList.add('at-the-end');
 
 var last = el.getBoundingClientRect();
 
+var invert = first.top - last.top;
+
 el.style.transform = `translateY(${invert}px)`;
 
 requestAnimationFrame(function() {

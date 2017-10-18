@@ -1,0 +1,17 @@
+var first = el.getBoundingClientRect();
+
+el.classList.add('at-the-end');
+
+var last = el.getBoundingClientRect();
+
+var invert = first.top - last.top;
+
+var player = el.animate([
+  { transform: `translateY(${invert}px)` },
+  { transform: 'translateY(0)' }
+], {
+  duration: 300,
+  easing: 'cubic-bezier(0,0,0.32,1)',
+});
+
+player.addEventListener('finish', tidyUpAnimations);

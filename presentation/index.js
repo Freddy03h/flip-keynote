@@ -194,14 +194,23 @@ export default class Presentation extends React.Component {
           lang="js"
           code={require("raw-loader!../src/examples/flip.example")}
           ranges={[
-            { loc: [0, 15], title: "F.L.I.P." },
+            { loc: [0, 17], title: "F.L.I.P." },
             { loc: [0, 1], note: "Get the first position" },
             { loc: [2, 3], note: "Change the Layout" },
             { loc: [4, 5], note: "Get the last position" },
-            { loc: [6, 7], note: "Invert" },
-            { loc: [8, 9], note: "Wait for the next frame" },
-            { loc: [10, 12], note: "Play the animation" },
-            { loc: [14, 15], note: "Capture the end with transitionend" },
+            { loc: [6, 9], note: "Invert" },
+            { loc: [10, 11], note: "Wait for the next frame" },
+            { loc: [12, 14], note: "Play the animation" },
+            { loc: [16, 17], note: "Capture the end with transitionend" },
+          ]}
+        />
+
+        <CodeSlide
+          transition={[]}
+          lang="js"
+          code={require("raw-loader!../src/examples/flip2.example")}
+          ranges={[
+            { loc: [8, 15] },
           ]}
         />
 
