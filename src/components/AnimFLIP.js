@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
+import { Heading } from "spectacle";
 
 import Button from './Button'
 
@@ -95,6 +96,15 @@ class AnimFLIP extends Component {
     })
   }
 
+  stepName = (step) => {
+    switch(step) {
+      case 1: return 'First'
+      case 2: return 'Last'
+      case 3: return 'Invert'
+      case 4: return 'Play'
+    }
+  }
+
   render () {
     const { step } = this.state
 
@@ -109,6 +119,9 @@ class AnimFLIP extends Component {
           <Item letter="C" index={2} step={step} />
         </div>
         <div style={styles.control}>
+          <Heading size={6} caps textColor="tertiary">
+            { this.stepName(step) }
+          </Heading>
           <Button onClick={this.addStep}>Next Step</Button>
         </div>
       </div>
@@ -121,7 +134,6 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    //backgroundColor: 'rgba(0,0,0,0.2)',
     transformStyle: 'preserve-3d',
     transition: 'transform ease 2s,opacity ease 2s',
   },
@@ -129,6 +141,9 @@ const styles = {
     transform: 'rotateY(36deg)',
   },
   control: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     transform: 'translateY(100px)',
     textAlign: 'right',
   }

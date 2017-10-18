@@ -6,8 +6,7 @@
 >
 {
   this.props.dataList.map((data, index) =>
-    <ListItem {...data} />
+    <ListItem key={ data.id } {...data} />
   )
 }
 </FlipMove>
-

@@ -1,6 +1,6 @@
 var first = el.getBoundingClientRect();
 
-el.classList.add('totes-at-the-end');
+el.classList.add('at-the-end');
 
 var last = el.getBoundingClientRect();
 
