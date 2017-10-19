@@ -109,7 +109,7 @@ class AnimFLIP extends Component {
     const { step } = this.state
 
     return (
-      <div>
+      <div style={{transformStyle: 'preserve-3d'}}>
         <div style={[
           styles.container,
           step >= 1 && styles.containerStep1,
@@ -144,7 +144,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    transform: 'translateY(100px)',
+    transform: 'translateY(60px)',
     textAlign: 'right',
   }
 }
