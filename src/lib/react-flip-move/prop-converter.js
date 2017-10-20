@@ -58,7 +58,12 @@ function propConverter(ComposedComponent) {
 
       // Gather any additional props; they will be delegated to the
       // ReactElement created.
-      const primaryPropKeys = Object.keys(Converter.propTypes);
+      //const primaryPropKeys = Object.keys(Converter.propTypes);
+      const primaryPropKeys = [
+        'children','easing','duration','delay','staggerDurationBy',
+        'staggerDelayBy','onStart','onFinish','onStartAll','onFinishAll',
+        'typeName','disableAllAnimations','enterAnimation','leaveAnimation','getPosition'
+      ]
       const delegatedProps = omit(this.props, primaryPropKeys);
 
       // The FlipMove container element needs to have a non-static position.
