@@ -46,6 +46,7 @@ import {
   List4,
   ListTransform2,
   AnimFLIP,
+  WrapLayout,
 } from '../src/components'
 
 export default class Presentation extends React.Component {
@@ -133,6 +134,10 @@ export default class Presentation extends React.Component {
           <Text textColor="tertiary" margin="3.5rem auto 0">
             I don't want to do all the Layout in JavaScript 😓
           </Text>
+        </Slide>
+
+        <Slide align="middle flex-start">
+          <WrapLayout />
         </Slide>
 
         <Slide>
