@@ -89,7 +89,7 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
 
-        {/*<Slide bgColor="secondary">
+        <Slide bgColor="secondary">
 
           <Link href="https://www.youtube.com/watch?v=qrbbD-1ET14" target="_blank" style={{display: 'flex', alignItems: 'center', margin: '0 auto 3em'}}>
             <img src={images.freddy} style={{width: 150, height: 150, display: 'block', borderRadius: 75, border: 'solid white 4px'}} />
@@ -110,7 +110,7 @@ export default class Presentation extends React.Component {
           </Link>
 
           <Text textColor="tertiary">Only use <Code textColor="tertiary">transform</Code> and <Code textColor="tertiary">opacity</Code> for animations 🚀</Text>
-        </Slide>*/}
+        </Slide>
 
         <Slide>
           <Heading size={2} caps textColor="secondary">
