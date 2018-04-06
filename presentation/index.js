@@ -31,8 +31,8 @@ require("spectacle/lib/themes/default/index.css");
 
 const images = {
   userperception: require("../assets/user-perception.jpg"),
-  freddy: require("../assets/freddy.jpg"),
-  thomas: require("../assets/thomas.jpg"),
+  // freddy: require("../assets/freddy.jpg"),
+  // thomas: require("../assets/thomas.jpg"),
 };
 
 preloader(images);
@@ -89,7 +89,7 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
 
-        <Slide bgColor="secondary">
+        {/*<Slide bgColor="secondary">
 
           <Link href="https://www.youtube.com/watch?v=qrbbD-1ET14" target="_blank" style={{display: 'flex', alignItems: 'center', margin: '0 auto 3em'}}>
             <img src={images.freddy} style={{width: 150, height: 150, display: 'block', borderRadius: 75, border: 'solid white 4px'}} />
@@ -110,7 +110,7 @@ export default class Presentation extends React.Component {
           </Link>
 
           <Text textColor="tertiary">Only use <Code textColor="tertiary">transform</Code> and <Code textColor="tertiary">opacity</Code> for animations 🚀</Text>
-        </Slide>
+        </Slide>*/}
 
         <Slide>
           <Heading size={2} caps textColor="secondary">
@@ -282,6 +282,18 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
+          <img className="content" src="https://d13yacurqjgara.cloudfront.net/users/30252/screenshots/2455519/cinemaui.gif" />
+        </Slide>
+
+        <Slide>
+          <img className="content" src="https://s3.amazonaws.com/media-p.slid.es/uploads/174419/images/2873479/flip-1.gif" />
+        </Slide>
+
+        <Slide>
+          <img className="content" src="https://cdn-images-1.medium.com/max/1600/1*RG13Z-i12FOPYTpWjSGycw.gif" />
+        </Slide>
+
+        <Slide>
           <Heading size={4} caps textColor="secondary" margin="-4rem auto 0.5rem">
             References
           </Heading>
@@ -292,17 +304,23 @@ export default class Presentation extends React.Component {
             <ListItem><Link href="https://medium.com/developers-writing/animating-the-unanimatable-1346a5aab3cd#.7a0hhecpw" target="_blank">Animating the Unanimatable. <span style={{fontSize: '0.8em'}}>Smooth reordering transitions in React.js</span></Link></ListItem>
             <ListItem><Link href="https://termvader.github.io/css-contain/" target="_blank">CSS 'contain' Property</Link></ListItem>
             <ListItem><Link href="https://hacks.mozilla.org/2017/10/the-whole-web-at-maximum-fps-how-webrender-gets-rid-of-jank/" target="_blank">How Firefox Quantum WebRender gets rid of jank</Link></ListItem>
+            <ListItem><Link href="https://css-tricks.com/animating-layouts-with-the-flip-technique/" target="_blank">Animating Layouts with the FLIP Technique</Link></ListItem>
+            <ListItem><Link href="https://medium.com/outsystems-experts/flip-your-60-fps-animations-flip-em-good-372281598865" target="_blank">FLIP Your 60 FPS Animations, FLIP ’Em Good</Link></ListItem>
+            <ListItem><Link href="https://medium.freecodecamp.org/shared-element-transition-with-react-native-159f8bc37f50" target="_blank">Shared Element Transition with React Native</Link></ListItem>
           </List>
 
           <Text textAlign="left">Talks</Text>
           <List textColor="tertiary" margin="0px 0px 1em">
             <ListItem><Link href="https://www.youtube.com/watch?v=RCFQu0hK6bU" target="_blank">The Applied Science of Runtime Performance</Link></ListItem>
             <ListItem><Link href="https://www.youtube.com/watch?v=thNyy5eYfbc" target="_blank">High performance web user interfaces</Link></ListItem>
+            <ListItem><Link href="http://slides.com/davidkhourshid/flipping#/" target="_blank">FLIPping Awesome Animations (slides v2)</Link></ListItem>
+            <ListItem><Link href="http://slides.com/davidkhourshid/flip#/" target="_blank">FLIPping out about Animated Layouts (slides v1)</Link></ListItem>
           </List>
 
           <Text textAlign="left">Tools</Text>
           <List textColor="tertiary" margin="0px 0px 1em">
             <ListItem><Link href="https://github.com/joshwcomeau/react-flip-move" target="_blank">react-flip-move</Link></ListItem>
+            <ListItem><Link href="https://brunnolou.github.io/react-morph/?addons=0" target="_blank">react-morph</Link></ListItem>
           </List>
 
           <Text textAlign="left">Others</Text>
